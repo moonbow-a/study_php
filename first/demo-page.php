@@ -10,6 +10,9 @@
  if( have_posts() ) {
      while( have_posts() ) {
          the_post();
+          echo '<article id="' . the_ID() . '"' .  post_class() . '>';
+              the_content(); 
+     echo '</article>';
      }
  }
  else {
